@@ -1,0 +1,165 @@
+.body {
+  display: flex;
+}
+.wrapper{
+  display: flex;
+  width: 100%;
+  margin: 10px 10px 0;
+}
+.wrapperSearchFormsContainer {
+  display: flex;
+  flex-wrap: wrap;  
+}
+.wrapperContainer {
+  display: flex;
+  flex-direction: column;  
+}
+.form {
+  width: 370px;
+  height: 700px;
+  background: rgb(240 255 240/30%);
+  border: solid black 1px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px #ccc;
+  margin: 10px;
+  padding: 10px 30px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+}
+.form__button {
+  width: 100px;
+  font-size: 16px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  border: solid grey 0.1px;
+}
+.form__input {
+  width: 250px;
+  height: 25px;
+  margin: 8px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: solid grey 0.1px;
+  outline: none;
+}
+.form__title {
+  font-size: 30px;
+  font-weight: bolder;
+  font-style: italic;
+  margin-bottom: 14px;
+}
+.form__heading {
+  margin: 10px 0;
+  font-weight: bolder;
+  text-decoration: underline;
+  font-size: 22px;
+}
+input:focus:required:valid {
+  border-color: green;
+  color: green;
+  box-shadow: none;
+}
+
+input:focus:required:invalid {
+  border-color: red;
+  color: red;
+  box-shadow: none;
+}
+.hidden {
+  display: none;
+}
+.search-form {
+  width: 340px;
+  height: 60px;
+  background: rgb(240 255 240/30%);
+  border: solid black 1px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px #ccc;
+  margin: 10px 4px;
+  padding: 4px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+  text-align: center;
+}
+.search-form__input {
+  width: 220px;
+  height: 25px;
+  margin: 14px;
+  padding: 3px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: solid grey 0.1px;
+  outline: none;
+}
+.search-form__title {
+  text-decoration: underline;
+}
+.sort-form {
+  width: 450px;
+  height: 60px;
+  background: rgb(240 255 240/30%);
+  border: solid black 1px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px #ccc;
+  margin: 10px 4px;
+  padding: 4px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+  text-align: center;
+}
+.card {
+  width: 280px;
+  border: solid grey 3px;
+  text-align: center;
+  margin: 8px;
+  font-size: 20px;  
+  box-shadow: 0 4px 16px #ccc;
+  border-radius: 10px;
+  background: rgb(240 255 240/40%);
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.card__img {
+  height: 150px;
+  width: 150px;
+}
+.card__input {
+  width: 190px;
+  height: 22px;
+  margin: 5px; 
+  font-size: 16px;
+  border: solid grey 0.1px;
+  border-radius: 5px;
+  box-shadow: 0 4px 16px #ccc;
+  outline: none;
+  background-color: rgba(243, 243, 250, 0.979);
+}
+.card__button {
+   margin: 10px; 
+}
+.card__description{
+  padding-bottom: 10px;
+}
+.card__label {
+  font-size: 18px;
+  font-weight: 500;
+}
+.product-container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+   margin: 10px;
+}
+.card_border-grey {
+  border: solid grey 3px;
+}
+.card_border-green {
+  border: solid greenyellow 3px;
+}
+.card_border-gold {
+  border: solid gold 3px;
+}
+.red {
+  color: red;
+}
