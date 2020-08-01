@@ -42,7 +42,7 @@ export class Card extends React.Component {
   };
 
   setLastOne = () => {
-    if (this.props.count === 1) {
+    if (this.props.count === "1" || this.props.count === 1 ) {
       return " (LAST ONE) ";
     }
   };
@@ -63,13 +63,16 @@ export class Card extends React.Component {
         </div>
       );
     } else {
-      return "";
+      return (
+        <div className={this.state.isToggle ? "description" : "hidden"}>
+          No product description
+        </div>     
+      )
     }
   };
 
   updateItem = (e) => {
-    e.preventDefault();
-    // console.log(this.state);
+    e.preventDefault();   
     const { updateItem, id } = this.props;
     updateItem(id, this.state);
     this.setState({
@@ -91,7 +94,7 @@ export class Card extends React.Component {
     return (
       <div className={this.props.className} id={this.props.id}>
         <div>
-          <img className="card__img" src={this.setDefaultImg()} />
+          <img className="card__img" src={this.setDefaultImg()} alt="" />
         </div>
         <div>Name: {this.props.name}</div>
         <div>Price: {this.props.price}</div>
@@ -140,7 +143,7 @@ export class Card extends React.Component {
         onSubmit={this.updateItem}
       >
         <div>
-          <img className="card__img" src={this.setDefaultImg()} />
+          <img className="card__img" src={this.setDefaultImg()} alt="" />
         </div>
         <div>
           <label className="card__label">
@@ -164,7 +167,7 @@ export class Card extends React.Component {
               defaultValue={this.props.name}
               pattern="[A-Z][A-z]+"
               title="This input should contain at list 5 characters and and start with an uppercase letter "
-              minLength={5}
+              minLength="4"
               className="card__input"
               required
             />
@@ -180,7 +183,8 @@ export class Card extends React.Component {
               defaultValue={this.props.price}
               pattern="[0-9]+"
               title="This input should contain only numbers"
-              min={1}
+              type="number"
+              min="1"
               required
               className="card__input"
             />
@@ -194,7 +198,8 @@ export class Card extends React.Component {
               onChange={this.handleClickChangeCount}
               defaultValue={this.props.count}
               pattern="[0-9]+"
-              min={1}
+              type="number"
+              min="1"
               title="This input should contain only numbers"
               className="card__input"
               required
@@ -210,7 +215,7 @@ export class Card extends React.Component {
               defaultValue={this.props.article}
               pattern="[A-Z][0-9][0-9][A-z0-9]+"
               title="Article must begin with a capital letter and then includes 2 number"
-              minLength={4}
+              minLength="4"
               className="card__input"
               required
             />

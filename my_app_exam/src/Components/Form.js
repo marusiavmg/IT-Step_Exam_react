@@ -68,8 +68,7 @@ export class Form extends React.Component {
   };
 
   addItem = (e) => {
-    e.preventDefault();
-    // console.log(this.state);
+    e.preventDefault();   
     const { addItem } = this.props;
     addItem(this.state);
     //clear form
@@ -91,7 +90,7 @@ export class Form extends React.Component {
             id={this.state.id}
             pattern="[A-Z][A-z]+"
             title="This input should contain at list 5 characters and and start with an uppercase letter "
-            minLength={5}
+            minLength={4}
             placeholder="Product name"
             required
           />
@@ -107,7 +106,7 @@ export class Form extends React.Component {
             id="nameArticle"
             pattern="[A-Z][0-9][0-9][A-z0-9]+"
             title="Article must begin with a capital letter and then includes 2 number"
-            minLength={4}
+            minLength="4"
             placeholder="F25vs6..."
             required
           />
@@ -122,8 +121,8 @@ export class Form extends React.Component {
             className="form__input"
             id="nameCount"
             pattern="[0-9]+"
-            min={1}
-            placeholder="Enter number of products"
+            min="1"
+            placeholder="Enter number of product"
             required
           />
         </div>
@@ -137,8 +136,9 @@ export class Form extends React.Component {
             className="form__input"
             pattern="[0-9]+"
             title="This input should contain only numbers"
-            min={1}
-            placeholder="Enter cost of products"
+            min="1"
+            type="number"
+            placeholder="Enter cost of product (100$)"
             id="namePrice"
           />
         </div>

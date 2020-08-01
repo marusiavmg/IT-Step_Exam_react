@@ -46,7 +46,7 @@ class App extends React.Component {
         {
           article: "G999",
           count: 13,
-          date: "2020/02/15",
+          date: "2020/01/15",
           image:
             "https://images.ru.prom.st/405057671_w200_h200_vstraivaemyj-morozilnik-teka.jpg",
           name: "Refrigerator",
@@ -129,7 +129,7 @@ class App extends React.Component {
             price: card.changePrice,
             count: card.changeCount,
             article: card.changeArticle,
-            date: new Date().toLocaleDateString("en-GB"),
+            date: new Date().toLocaleDateString('zh-Hans-CN'),
           }
         : item
     );
